@@ -1,0 +1,16 @@
+
+
+item = input("Enter the item (A or any other letter for B): ").strip().upper()
+
+quantity = int(input("Enter the quantity: "))
+
+if item == "A":
+    unit_price = 10.00
+else:
+    unit_price = 20.00
+
+extended_price = quantity * unit_price
+
+print("\nItem:", item)
+print("Unit Price: $", format(unit_price, ".2f"))
+print("Extended Price: $", format(extended_price, ".2f"))

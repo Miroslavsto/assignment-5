@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS4P1"/>
+        <attribute name="authors" value="alexe"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-15 10:16:59 PM"/>
+        <attribute name="created" value="YWxleGU7TUlDSElHQU47MjAyNS0wMi0xNDsxMjo0MToxNSBQTTsyMzc3"/>
+        <attribute name="edited" value="YWxleGU7TUlDSElHQU47MjAyNS0wMi0xNDswMTowMTo1MCBQTTsxOzI0Nzg="/>
+        <attribute name="edited" value="bWlyb3M7TEFQVE9QLTZUNkI5NVM2OzIwMjUtMDItMTU7MTA6MTY6NTkgUE07MTsyOTU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="unitPrice" type="Integer" array="False" size=""/>
+            <declare name="extendedPrice" type="Integer" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="totalPrice" type="Real" array="False" size=""/>
+            <input variable="quantity"/>
+            <if expression="quantity &#8805; 1000">
+                <then>
+                    <assign variable="unitPrice" expression="3"/>
+                </then>
+                <else>
+                    <assign variable="unitPrice" expression="5"/>
+                </else>
+            </if>
+            <assign variable="extendedPrice" expression="quantity * unitPrice"/>
+            <assign variable="tax" expression="extendedPrice * 0.07"/>
+            <assign variable="totalPrice" expression="extendedPrice + tax"/>
+        </body>
+    </function>
+</flowgorithm>

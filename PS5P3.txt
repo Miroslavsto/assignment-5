@@ -1,0 +1,13 @@
+def calculate_price():
+    quantity = int(input("Enter the number of books to order: "))
+    unit_price = float(input("Enter the cost per book: "))
+    
+    extended_price = quantity * unit_price
+    shipping = 0 if extended_price > 50 else 25
+    total = extended_price + shipping
+    
+    print(f"Order Total: ${extended_price:.2f}")
+    print(f"Shipping Charge: ${shipping:.2f}")
+    print(f"Total: ${total:.2f}")
+
+calculate_price()

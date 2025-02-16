@@ -1,0 +1,14 @@
+def calculate_warranty():
+    name = input("Enter the name of the appliance: ")
+    cost = float(input("Enter the cost of the appliance: "))
+    
+    warranty_cost = cost * 0.10 if cost > 1000 else cost * 0.05
+    total = cost + warranty_cost
+    
+    print(f"Appliance Name: {name}")
+    print(f"Appliance Cost: ${cost:.2f}")
+    print(f"Warranty Cost: ${warranty_cost:.2f}")
+    print(f"Total Cost: ${total:.2f}")
+
+
+calculate_warranty()
